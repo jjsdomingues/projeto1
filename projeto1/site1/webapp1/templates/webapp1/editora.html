@@ -1,0 +1,21 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+{% if editora %}
+    <TABLE align="center">
+    {% for editoras in editora %}
+        <TR>
+            <TD>
+                <TR><TH>Editora:</TH><TD> {{editoras.nome}}</TD></TR>
+                <TR><TH>E-mail:</TH><TD> {{editoras.email}}</TD></TR>
+                <tr style="height: 20px;"></tr>
+            </TD>
+        </TR>
+    {% endfor %}
+    </TABLE>        
+{% else %}
+
+{% endif %}
+    
+{% endblock %}

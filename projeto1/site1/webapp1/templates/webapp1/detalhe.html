@@ -1,0 +1,23 @@
+{% extends "./base.html" %}
+
+{% block content %}
+
+{% if liv  %} 
+<TABLE align="center">    
+    <TR><TH>Título</TH><TD> {{liv.titulo}}</TD></TR>
+    <TR><TH>Autores</TH><TD> {{liv.autores}}</TD></TR>
+    <TR><TH>Data Edição</TH><TD> {{liv.data_pub}}</TD></TR>
+    <TR><TH>Páginas</TH><TD> {{liv.total_paginas}}</TD></TR>
+    <TR><TH>Editora</TH><TD> {{liv.editora}}</TD></TR>
+    <TR><TH>Preço (€)</TH><TD> {{liv.preco}}</TD></TR>
+    {% if liv.imagem %}
+    <TR><TD> <IMG width="180" src="{{ liv.imagem.url }}"></TD></TR>
+    {% endif %}
+</TABLE>
+{% else %}
+      <P> Não existem dados! </P>
+{% endif%}    
+      
+{% endblock %}
+
+

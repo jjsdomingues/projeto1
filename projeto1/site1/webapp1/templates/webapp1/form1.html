@@ -1,0 +1,18 @@
+{% extends "./base.html" %}
+        
+{% block content %}
+
+<FORM action = "" method="get">
+    <LABEL for="numero"> Insira um número inteiro: </LABEL>
+    <INPUT id="numero" name="numero" type='text' />
+    <INPUTt type="submit" value="Ok" />
+</FORM>     
+
+{% if dados %}
+    {% for i in dados %}
+        <P>{{i}}</P>
+    {% endfor %}       
+{% endif %}
+
+{% endblock %}
+
